@@ -35,5 +35,10 @@ We configure it so that if the authentication server goes down, there won't be a
 
 ##### S1(config)# aaa authentication login vty group tacacs+ local"
 <img src="Server-TACACS.png">
-__The NSA security guide__ recommends modifying the privilege level of certain default level '1' commands to level '15'.
-<img src="Server-TACACS.png">
+
+### We verified and _the Authentication for the RADIUS User_ is functioning correctly.
+__The NSA Security Guide__ recommends modifying the privilege level of certain default level __'1'__ commands to level __'15'__.
+
+<img src="Config-privilege-level-1.png">
+<img src="Config-privilege-level-2.png">
+
