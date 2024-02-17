@@ -30,9 +30,9 @@ __TACACS+__: More prevalent in corporate environments where detailed control ove
 
 #### - We add a server and configure the 'AAA' service on switch S1. We add the user 'raduser' with the a password.
 
-<img src="packet-tracer-simulator.png>
-  
-#### - Next, we connect the server to switch 1 on port FastEthernet 0/1 in access mode and belonging to VLAN1.
+<img src="packet-tracer-simulator.png">
+
+  #### - Next, we connect the server to switch 1 on port FastEthernet 0/1 in access mode and belonging to VLAN1.
 
 #### - Now, we proceed to configure the switch to authenticate users __first against the TACACS server__, and in case it fails to authenticate against the server, it should fall back to __local authentication__.
 
