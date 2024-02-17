@@ -48,6 +48,7 @@ The last command __privilege exec level 1 show ip__ sets the commands __show__ a
 
 Save the configuration using the __wr__ command."
 
-<img src="Config-privilege-level-1.png">
-<img src="Config-privilege-level-2.png">
+
+<img src="Config-privilege-level.png">
+
 
