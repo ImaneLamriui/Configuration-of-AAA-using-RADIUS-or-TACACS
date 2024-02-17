@@ -20,7 +20,20 @@ __RADIUS__: Commonly used in environments where remote user authentication is ne
 __TACACS+__: More prevalent in corporate environments where detailed control over user actions is required, such as in the management of critical network devices.
 
 ### If we wanted to have centralized management of network devices:
-##### - We could implement a RADIUS server or TACACS+ server in the network and configure the network devices to authenticate users. 
-##### - We will set up a TACACS authentication server on the network using the Packet Tracer simulator.
-
+#### - We could implement a RADIUS server or TACACS+ server in the network and configure the network devices to authenticate users. 
+#### - We will set up a TACACS authentication server on the network using the Packet Tracer simulator.
+##### Prerequisites: Installation of Cisco-Packet-Tracer-Software.
+###### In this image, two VLANs have been configured and trunk connections have been verified.
 <img src="packet-tracer-simulator.png">
+We add a server and configure the 'AAA' service on switch S1. We add the user 'raduser' with the a password.
+
+Next, we connect the server to switch 1 on port FastEthernet 0/1 in access mode and belonging to VLAN1.
+
+Now, we proceed to configure the switch to authenticate users __first against the TACACS server__, and in case it fails to authenticate against the server, it should fall back to __local authentication__.
+
+We configure it so that if the authentication server goes down, there won't be any way to access the switches. With the following command, we instruct the switch to first attempt authentication through the RADIUS AAA server, and if that fails, it should check against the local switch users with the following command:
+
+##### S1(config)# aaa authentication login vty group tacacs+ local"
+<img src="Server-TACACS.png">
+__The NSA security guide__ recommends modifying the privilege level of certain default level '1' commands to level '15'.
+<img src="Server-TACACS.png">
