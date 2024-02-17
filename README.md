@@ -24,19 +24,24 @@ __TACACS+__: More prevalent in corporate environments where detailed control ove
 #### - We will set up a TACACS authentication server on the network using the Packet Tracer simulator.
 ##### Prerequisites: Installation of Cisco-Packet-Tracer-Software.
 ###### In this image, two VLANs have been configured and trunk connections have been verified.
-<img src="packet-tracer-simulator.png">
-We add a server and configure the 'AAA' service on switch S1. We add the user 'raduser' with the a password.
 
-Next, we connect the server to switch 1 on port FastEthernet 0/1 in access mode and belonging to VLAN1.
+<img src="VLAN's-fig.png">
+<img src="VLAN's.png">
 
-Now, we proceed to configure the switch to authenticate users __first against the TACACS server__, and in case it fails to authenticate against the server, it should fall back to __local authentication__.
+#### - We add a server and configure the 'AAA' service on switch S1. We add the user 'raduser' with the a password.
 
-We configure it so that if the authentication server goes down, there won't be any way to access the switches. With the following command, we instruct the switch to first attempt authentication through the RADIUS AAA server, and if that fails, it should check against the local switch users with the following command:
+<img src="packet-tracer-simulator.png>
+  
+#### - Next, we connect the server to switch 1 on port FastEthernet 0/1 in access mode and belonging to VLAN1.
 
-##### S1(config)# aaa authentication login vty group tacacs+ local"
+#### - Now, we proceed to configure the switch to authenticate users __first against the TACACS server__, and in case it fails to authenticate against the server, it should fall back to __local authentication__.
+
+#### - We configure it so that if the authentication server goes down, there won't be any way to access the switches. With the following command, we instruct the switch to first attempt authentication through the RADIUS AAA server, and if that fails, it should check against the local switch users with the following command:
+
+###### S1(config)# aaa authentication login vty group tacacs+ local"
 <img src="Server-TACACS.png">
 
-### We verified and _the Authentication for the RADIUS User_ is functioning correctly.
+#### - We verified and _the Authentication for the RADIUS User_ is functioning correctly.
 __The NSA Security Guide__ recommends modifying the privilege level of certain default level __'1'__ commands to level __'15'__.
 
 <img src="Config-privilege-level-1.png">
