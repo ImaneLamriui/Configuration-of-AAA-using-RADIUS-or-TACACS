@@ -44,6 +44,10 @@ __TACACS+__: More prevalent in corporate environments where detailed control ove
 #### - We verified and _the Authentication for the RADIUS User_ is functioning correctly.
 __The NSA Security Guide__ recommends modifying the privilege level of certain default level __'1'__ commands to level __'15'__.
 
+The last command __privilege exec level 1 show ip__ sets the commands __show__ and __show ip__ at level __1__.
+
+Save the configuration using the __wr__ command."
+
 <img src="Config-privilege-level-1.png">
 <img src="Config-privilege-level-2.png">
 
